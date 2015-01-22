@@ -1,0 +1,6 @@
+?? para imprimir key_t:
+	es un entero
+	http://lxr.free-electrons.com/source/include/linux/types.h#L23
+	http://lxr.free-electrons.com/source/include/uapi/linux/posix_types.h#L32
+
+añadir manual de ftok para aclarar el -1 en ./chetito

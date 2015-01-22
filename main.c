@@ -20,6 +20,8 @@ int main(int argc, char const *argv[])
 
 	llave = ftok(argv[0],'K');
 
+	printf("Llave devuelta por ftok(argv[0], 'K'): %d\n", (int) llave);
+
 	if((shmid = shmget(llave, sizeof(int), IPC_CREAT | 0600)) == -1){
 		perror("Error en shmget");
 		exit(-1);
