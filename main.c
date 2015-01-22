@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
@@ -30,6 +31,20 @@ int main(int argc, char const *argv[])
 	if((variable = (int *)shmat(shmid, NULL, 0)) == (int *)(-1)){
 		perror("Error en shmat");
 		exit(-1);
+	}
+
+	if(fork()==0){
+		printf("SOY JUNIOR:\n");
+		printf("PID: %d\n", getpid());
+		printf("shmid: %d\n", shmid);
+		printf("direccion de memoria: %x\n\n", variable);
+	}
+	else{
+		printf("SOY PAPA PROCESO:\n");
+		printf("PID: %d\n", getpid());
+		printf("shmid: %d\n", shmid);
+		printf("direccion de memoria: %x\n\n", variable);
+
 	}
 
 	while(1)
