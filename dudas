@@ -3,3 +3,6 @@ se requiere ./ para llamar a un archivo dentro de la misma carpeta ?
 como sabe IPC_CREAT que la memoria no ha sido creada?
 
 como ejecutar codigo que se ejecute al recibir ctrl^c ?? para eliminar memoria
+
+por que leer_car maneja caracteres y los regresa como enteros?
+es necesario para implementar correctamente el combo scanf, sscanf ?

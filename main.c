@@ -9,8 +9,8 @@ int leer_car(){
 	char letra;
 	char almacen[80];
 
-	scanf("%c", &letra);
-	//sscanf(almacen, "%c", &letra);
+	scanf("%c", almacen);
+	sscanf(almacen, "%c", &letra);
 	return letra;
 }
 
@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
 		exit(-1);
 	}
 
-	/*if(fork()==0){
+	if(fork()==0){
 		printf("SOY JUNIOR:\n");
 		printf("PID: %d\n", getpid());
 		printf("shmid: %d\n", shmid);
@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 		printf("shmid: %d\n", shmid);
 		printf("direccion de memoria: %x\n\n", variable);
 	}
-*/
+
 	while(1)
 	{
 		printf("\nIntroduzca m para modificar el valor de la variable, v para visualizarla y t para terminar:\n");

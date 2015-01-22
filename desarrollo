@@ -4,3 +4,14 @@
 	http://lxr.free-electrons.com/source/include/uapi/linux/posix_types.h#L32
 
 añadir manual de ftok para aclarar el -1 en ./chetito
+
+pregunta 6.4 
+
+
+	scanf("%c", &letra);
+	//sscanf(almacen, "%c", &letra);
+
+utilizando un solo scanf se afecta el comportamiento del menú.
+El caracter '\n' tambien es leido y el switch opera sobre él.
+
+Esto se puede verificar imprimiendo la letra incorrecta detectada:
